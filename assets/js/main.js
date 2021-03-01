@@ -25,18 +25,22 @@ let projects = [
   ]
 ];
 
+/*
 for (i = 0; i < projects.length; i++) {
 console.log(projects[i][0]);
 }
+*/
 
 function addProject(projects) {
 for (project in projects) {
 
+  /*
   console.log(project);
+  */
 
   /* create a new element to hold the project */
   let article = document.createElement("article");
-  
+
   /* add style tags to article */
   article.setAttribute("class", "project-tile");
 
@@ -46,14 +50,14 @@ for (project in projects) {
   let headerText = document.createTextNode(projects[project][0]);
   header.appendChild(headerText);
   article.appendChild(header);
-  
+
   /* add description to article */
   let p = document.createElement("p");
   p.setAttribute("class", "flex-item");
   let pText = document.createTextNode(projects[project][1]);
   p.appendChild(pText);
   article.appendChild(p);
-  
+
   /* add github link to article */
   let github = document.createElement("a");
   github.setAttribute("class", "flex-item");
@@ -78,12 +82,16 @@ for (project in projects) {
   codepen.setAttribute("target", "_blank");
   article.appendChild(codepen);
 
+  /*
   console.log(article);
+  */
 
   /* add to the DOM */
   var container = document.getElementById("projects");
 
+  /*
   console.log(container);
+  */
 
   container.appendChild(article);
 }
